@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> {% block title %}Bucket-list{% endblock %}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+
+    
+<link href="https://fonts.googleapis.com/css2?family=Asul:wght@400;700&family=Crimson+Text:wght@400;700&family=Dosis:wght@800&family=Josefin+Sans:wght@100&family=Nova+Round&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="{{ asset('css/normalize.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+   
+
+    <link rel="icon" href="{{ asset('img/favicon.png') }}">
+</head>
+<body>
+<div class="container">
+<header>
+    <h1><a href="{{ path('main_home')}}"><img src="{{ asset('img/logo.png') }}" alt="Series!"></a> Bucket-List</h1>
+    {% include("inc/nav.html.twig") %}
+    </header>
+    <main>
+    {% block body %}{% endblock %}
+    </main>
+    <footer>
+    {% include("inc/footer.html.twig") %}
+   
+   
+    </footer>
+    </div>
+    
+</body>
+</html>
